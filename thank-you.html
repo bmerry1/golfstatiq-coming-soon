@@ -4,67 +4,99 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GolfStatIQ - Thank You!</title>
-    <link href="./dist/output.css" rel="stylesheet">
-</head>
+    
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Font: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
 
+    <style>
+        /* Apply the Inter font to the whole page */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+
+    <script>
+        // Custom Tailwind theme configuration to add our brand colors
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'charcoal': '#1A1A1A',
+                        'gold': '#D4AF37',
+                        'ivory': '#F3F4F6',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
 <body class="bg-charcoal text-ivory antialiased">
 
     <!-- Main Container -->
-    <div class="min-h-screen flex flex-col items-center justify-center text-center p-8">
+    <!-- We've added justify-between and more padding to create the correct spacing -->
+    <div class="min-h-screen flex flex-col items-center justify-center text-center p-8 py-16">
         
-        <!-- Checkmark Icon -->
-        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-green-500/10 border border-green-500/30 mb-6">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-            </svg>
-        </div>
-
-        <!-- Main Headline -->
-        <h1 class="text-4xl md:text-5xl font-bold text-white mb-3">
-            You're In!
-        </h1>
-        <p class="text-lg text-ivory/70 mb-10">
-            Check your email for a confirmation message.
-        </p>
-
-        <!-- Card for Next Actions -->
-        <div class="bg-black/50 border border-gray-800 rounded-lg p-8 max-w-2xl w-full">
-            
-            <!-- Viral Loop Section -->
-            <h2 class="text-xl font-bold text-gold mb-3">Help a Friend, Get Priority Access</h2>
-            <p class="text-ivory/80 mb-6">
-                Know a fellow data-obsessed golfer? Share this link and you'll both get bumped up the waitlist.
-            </p>
-            <div class="flex justify-center space-x-4 mb-8">
-                <!-- Twitter Share -->
-                <a href="#" class="flex items-center justify-center w-12 h-12 bg-gray-800 rounded-full hover:bg-gray-700 transition-colors">
-                    <svg class="w-6 h-6 text-ivory" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
-                </a>
-                <!-- Facebook Share -->
-                <a href="#" class="flex items-center justify-center w-12 h-12 bg-gray-800 rounded-full hover:bg-gray-700 transition-colors">
-                    <svg class="w-6 h-6 text-ivory" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"></path></svg>
-                </a>
-                <!-- Email Share -->
-                <a href="#" class="flex items-center justify-center w-12 h-12 bg-gray-800 rounded-full hover:bg-gray-700 transition-colors">
-                    <svg class="w-6 h-6 text-ivory" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                </a>
+        <!-- This div groups the main content to push the footer link down -->
+        <div class="flex flex-col items-center">
+            <!-- Checkmark Icon -->
+            <div class="flex items-center justify-center h-16 w-16 rounded-full bg-green-500/10 border border-green-500/30 mb-6">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
             </div>
 
-            <!-- Divider -->
-            <div class="border-t border-gray-800 my-6"></div>
-
-            <!-- Engagement Section -->
-            <h2 class="text-xl font-bold text-gold mb-3">Get a Head Start</h2>
-            <p class="text-ivory/80 mb-6">
-                While you wait, read our first guide on how to get the most out of your launch monitor data right now.
+            <!-- Main Headline -->
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-3">
+                You're In!
+            </h1>
+            <p class="text-lg text-ivory/70 mb-10">
+                Check your email for a confirmation message.
             </p>
-            <a href="#" class="bg-gold text-charcoal font-bold px-8 py-3 rounded-lg text-base hover:bg-yellow-400 transition-colors duration-200 inline-block">
-                Read The Guide
-            </a>
+
+            <!-- Card for Next Actions -->
+            <div class="bg-black/50 border border-gray-800 rounded-lg p-8 max-w-2xl w-full">
+                
+                <!-- Viral Loop Section -->
+                <h2 class="text-xl font-bold text-gold mb-3">Help a Friend, Get Priority Access</h2>
+                <p class="text-ivory/80 mb-6">
+                    Know a fellow data-obsessed golfer? Share this link and you'll both get bumped up the waitlist.
+                </p>
+                <div class="flex justify-center space-x-4 mb-8">
+                    <!-- Twitter Share -->
+                    <a href="#" class="flex items-center justify-center w-12 h-12 bg-gray-800 rounded-full hover:bg-gray-700 transition-colors">
+                        <svg class="w-6 h-6 text-ivory" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+                    </a>
+                    <!-- Facebook Share -->
+                    <a href="#" class="flex items-center justify-center w-12 h-12 bg-gray-800 rounded-full hover:bg-gray-700 transition-colors">
+                        <svg class="w-6 h-6 text-ivory" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"></path></svg>
+                    </a>
+                    <!-- Email Share -->
+                    <a href="#" class="flex items-center justify-center w-12 h-12 bg-gray-800 rounded-full hover:bg-gray-700 transition-colors">
+                        <svg class="w-6 h-6 text-ivory" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    </a>
+                </div>
+
+                <!-- Divider -->
+                <div class="border-t border-gray-800 my-6"></div>
+
+                <!-- Engagement Section -->
+                <h2 class="text-xl font-bold text-gold mb-3">Get a Head Start</h2>
+                <p class="text-ivory/80 mb-6">
+                    While you wait, read our first guide on how to get the most out of your launch monitor data right now.
+                </p>
+                <a href="#" class="bg-gold text-charcoal font-bold px-8 py-3 rounded-lg text-base hover:bg-yellow-400 transition-colors duration-200 inline-block">
+                    Read The Guide
+                </a>
+            </div>
         </div>
         
         <!-- Back to Home Link -->
-        <a href="https://www.golfstatiq.com" class="mt-12 text-ivory/60 hover:text-ivory transition-colors">
+        <a href="https://www.golfstatiq.com" class="text-ivory/60 hover:text-ivory transition-colors">
             &larr; Back to GolfStatIQ.com
         </a>
 
