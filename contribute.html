@@ -231,7 +231,7 @@
                  reject(new Error('Network error during upload.'))
             });
 
-            xhr.open('POST', 'http://127.0.0.1:8000/api/v1/contribute/upload', true);
+            xhr.open('POST', 'https://golfstatiq-api.onrender.com/api/v1/contribute/upload', true);
             xhr.send(formData);
         });
     }
