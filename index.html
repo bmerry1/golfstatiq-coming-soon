@@ -19,11 +19,12 @@
             GolfStatIQ puts an AI golf coach in your pocket, using your launch monitor data and our proprietary StrikeSigmaIQ™ to reveal exactly why you miss shots and give you a clear path to improve.
         </p>
         <div class="w-full max-w-md mx-auto">
-            <!-- MODIFIED: Removed action, method, target and added id -->
+            <!-- MODIFIED FORM -->
             <form id="signup-form-1">
-                <div class="flex items-center">
-                    <input type="email" name="EMAIL" class="flex-grow bg-gray-800/80 text-white border border-gray-600 rounded-l-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-gold" placeholder="Enter your email" required>
-                    <button type="submit" class="bg-gold text-charcoal font-bold px-6 py-3 rounded-r-md hover:bg-yellow-400 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gold">
+                <div class="space-y-4">
+                    <input type="text" name="FNAME" class="w-full bg-gray-800/80 text-white border border-gray-600 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-gold" placeholder="First Name" required>
+                    <input type="email" name="EMAIL" class="w-full bg-gray-800/80 text-white border border-gray-600 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-gold" placeholder="Email Address" required>
+                    <button type="submit" class="w-full bg-gold text-charcoal font-bold px-6 py-3 rounded-md hover:bg-yellow-400 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gold">
                         Get Early Access
                     </button>
                 </div>
@@ -95,11 +96,12 @@
              <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Be the First to Turn Practice Into Progress.</h2>
              <p class="text-ivory/80 mb-8">Join the waitlist for free, exclusive early access to the private beta.</p>
              <div class="w-full max-w-md mx-auto">
-                <!-- MODIFIED: Removed action, method, target and added id -->
+                <!-- MODIFIED FORM -->
                 <form id="signup-form-2">
-                    <div class="flex items-center">
-                        <input type="email" name="EMAIL" class="flex-grow bg-gray-800/80 text-white border border-gray-600 rounded-l-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-gold" placeholder="Enter your email" required>
-                        <button type="submit" class="bg-gold text-charcoal font-bold px-6 py-3 rounded-r-md hover:bg-yellow-400 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gold">
+                    <div class="space-y-4">
+                        <input type="text" name="FNAME" class="w-full bg-gray-800/80 text-white border border-gray-600 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-gold" placeholder="First Name" required>
+                        <input type="email" name="EMAIL" class="w-full bg-gray-800/80 text-white border border-gray-600 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-gold" placeholder="Email Address" required>
+                        <button type="submit" class="w-full bg-gold text-charcoal font-bold px-6 py-3 rounded-md hover:bg-yellow-400 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gold">
                             Get Early Access
                         </button>
                     </div>
@@ -108,36 +110,31 @@
         </div>
     </div>
 
-    <!-- NEW: JavaScript for AJAX form submission -->
+    <!-- JavaScript for AJAX form submission (no changes needed here) -->
     <script>
         const mailchimpUrl = 'https://gmail.us14.list-manage.com/subscribe/post?u=5c5648bf06d6228434ae5b2b6&id=5472794694&f_id=007eede0f0';
 
         const handleFormSubmit = (event) => {
-            event.preventDefault(); // Stop the form from submitting the default way
+            event.preventDefault(); 
 
             const form = event.target;
             const formData = new FormData(form);
 
-            // We need to use a different fetch mode ('no-cors') because Mailchimp's server
-            // doesn't allow direct browser requests from other websites (which is normal).
-            // This sends the data but doesn't wait for a response from Mailchimp.
             fetch(mailchimpUrl, {
                 method: 'POST',
                 body: formData,
-                mode: 'no-cors' // Important!
+                mode: 'no-cors'
             })
             .catch(error => console.error('Error:', error))
             .finally(() => {
-                // Regardless of whether the fetch succeeded or failed,
-                // redirect the user to the thank you page.
                 window.location.href = './thank-you.html';
             });
         };
 
-        // Attach the event listener to both forms
         document.getElementById('signup-form-1').addEventListener('submit', handleFormSubmit);
         document.getElementById('signup-form-2').addEventListener('submit', handleFormSubmit);
     </script>
 
 </body>
 </html>
+
