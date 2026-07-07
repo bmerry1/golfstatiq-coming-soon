@@ -2,7 +2,10 @@
 module.exports = {
   content: [
     "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}", // This covers all relevant files in the src folder
+    "./thank-you.html",
+    "./contribute/**/*.html",
+    "./from-the-bay/**/*.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
