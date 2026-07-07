@@ -14,7 +14,9 @@
     <meta property="og:url" content="https://www.golfstatiq.com/from-the-bay/">
     <meta property="og:image" content="https://www.golfstatiq.com/assets/hero-background.png">
 
+    <link rel="alternate" type="application/rss+xml" title="From the Bay | GolfStatIQ" href="https://www.golfstatiq.com/from-the-bay/feed.xml">
     <link href="../dist/output.css" rel="stylesheet">
+    <script defer data-domain="golfstatiq.com" src="https://plausible.io/js/script.js"></script>
 </head>
 <body class="bg-charcoal text-ivory antialiased">
 
@@ -84,7 +86,12 @@
 
     <!-- Coming soon list -->
     <section class="max-w-4xl mx-auto px-6 lg:px-8 pb-16">
-        <p class="text-ivory/50 text-xs uppercase tracking-[0.28em] mb-4">In the queue</p>
+        <div class="flex items-baseline justify-between mb-4">
+            <p class="text-ivory/50 text-xs uppercase tracking-[0.28em]">In the queue</p>
+            <a href="./feed.xml" class="text-ivory/50 hover:text-gold text-xs uppercase tracking-[0.28em] transition-colors">
+                RSS &rarr;
+            </a>
+        </div>
         <div class="space-y-3">
             <div class="border border-gray-800/60 rounded-lg p-5 flex items-start gap-4">
                 <span class="mt-1 h-2 w-2 rounded-full bg-gold/60 flex-shrink-0"></span>

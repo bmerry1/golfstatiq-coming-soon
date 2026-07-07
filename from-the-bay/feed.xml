@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>From the Bay | GolfStatIQ</title>
+    <link>https://www.golfstatiq.com/from-the-bay/</link>
+    <description>Range notes, launch-monitor findings, and product thinking from the founder of GolfStatIQ. What the numbers actually mean, one session at a time.</description>
+    <language>en-us</language>
+    <copyright>Copyright 2026 GolfStatIQ</copyright>
+    <lastBuildDate>Tue, 07 Jul 2026 12:00:00 EDT</lastBuildDate>
+    <atom:link href="https://www.golfstatiq.com/from-the-bay/feed.xml" rel="self" type="application/rss+xml" />
+    <image>
+      <url>https://www.golfstatiq.com/assets/gsiq-icon.png</url>
+      <title>From the Bay | GolfStatIQ</title>
+      <link>https://www.golfstatiq.com/from-the-bay/</link>
+    </image>
+
+    <item>
+      <title>The path is the root cause, not the face</title>
+      <link>https://www.golfstatiq.com/from-the-bay/club-path-vs-face-angle.html</link>
+      <guid isPermaLink="true">https://www.golfstatiq.com/from-the-bay/club-path-vs-face-angle.html</guid>
+      <pubDate>Tue, 07 Jul 2026 09:00:00 EDT</pubDate>
+      <author>bmerry@golfstatiq.com (Brian Merry)</author>
+      <category>Range Notes</category>
+      <description>What 15 shots on my 8-iron actually told me, once I stopped staring at face angle and started reading the pattern in the path.</description>
+      <content:encoded><![CDATA[
+        <p>Fifteen shots. Same 8-iron. Same ball. Bushnell Launch Pro. Working on tempo, not shape. What came back was fifteen pull-fades in a row: average club path of -5.4 degrees, face 2.1 degrees open to the path, face 3.3 degrees closed to the target. Carry 8.7 yards short of baseline. Spin 340 rpm higher.</p>
+        <p>The temptation is to blame the face. The face was closed to the target, which is why the ball started left. But the face was actually open to the path, which is why it faded back. The face was reacting to the path.</p>
+        <p><a href="https://www.golfstatiq.com/from-the-bay/club-path-vs-face-angle.html">Read the full post on golfstatiq.com</a></p>
+      ]]></content:encoded>
+    </item>
+
+  </channel>
+</rss>
