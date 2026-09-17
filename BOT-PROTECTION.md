@@ -13,7 +13,7 @@ Vercel Function that must accept the request before any contact is created.
 Visitor
   -> form on golfstatiq.com (Turnstile widget rendered client-side)
   -> POST /api/request-access
-       1. schema validation (name, email, launch monitor from a fixed list, goal >= 12 chars)
+       1. schema validation (name, email, launch monitor from a fixed list, goal 12-250 chars)
        2. honeypot field must be empty
        3. form fill time must be >= 3.5s and < 6h
        4. Turnstile token verified with Cloudflare Siteverify (hostname + action checked)
@@ -59,7 +59,8 @@ a real lead can still be recovered. Set them before announcing the form.
    be replayed. Also enable Mailchimp's reCAPTCHA on any form that stays live.
 3. Create two audience merge fields so the qualification answers are captured:
    - `LAUNCHMON` (text) - launch monitor or data source
-   - `GOAL` (text or long text) - what the golfer wants to diagnose
+   - `GOAL` (text) - what the golfer wants to diagnose. The form and endpoint bound this
+     to 250 characters to stay inside Mailchimp's text merge field limit
 
    If these do not exist the endpoint logs `mailchimp_merge_fields_missing` and retries
    with `FNAME` only, so submissions still succeed.

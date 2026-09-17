@@ -91,7 +91,7 @@
       name: 'improvementGoal',
       class: 'gsiq-field',
       required: 'required',
-      maxlength: '500',
+      maxlength: '250',
       'aria-label': 'What would you most like to diagnose or improve',
       placeholder:
         'What would you most like to diagnose? For example: driver dispersion, strike consistency, spin control, approach distance control.'

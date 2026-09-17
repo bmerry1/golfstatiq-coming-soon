@@ -250,7 +250,7 @@ module.exports = async (req, res) => {
   const firstName = cleanText(body.firstName, 60);
   const email = cleanText(body.email, 254).toLowerCase();
   const launchMonitor = cleanText(body.launchMonitor, 100);
-  const improvementGoal = cleanText(body.improvementGoal, 500);
+  const improvementGoal = cleanText(body.improvementGoal, 250);
   const honeypot = cleanText(body.company, 200);
   const turnstileToken = cleanText(body.turnstileToken, 4096);
   const elapsedMs = Number(body.elapsedMs);
