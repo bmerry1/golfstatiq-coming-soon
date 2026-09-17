@@ -39,7 +39,7 @@
         </p>
         <div class="w-full max-w-md mx-auto">
             <!-- MODIFIED FORM -->
-            <form id="signup-form-1">
+            <form id="signup-form-1" data-gsiq-signup>
                 <div class="space-y-4">
                     <input type="text" name="FNAME" class="w-full bg-gray-800/80 text-white border border-gray-600 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-gold" placeholder="First Name" required>
                     <input type="email" name="EMAIL" class="w-full bg-gray-800/80 text-white border border-gray-600 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-gold" placeholder="Email Address" required>
@@ -160,7 +160,7 @@
              <p class="text-ivory/80 mb-8">Request access to the pre-alpha. Live build, real data, evolving with your feedback.</p>
              <div class="w-full max-w-md mx-auto">
                 <!-- MODIFIED FORM -->
-                <form id="signup-form-2">
+                <form id="signup-form-2" data-gsiq-signup>
                     <div class="space-y-4">
                         <input type="text" name="FNAME" class="w-full bg-gray-800/80 text-white border border-gray-600 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-gold" placeholder="First Name" required>
                         <input type="email" name="EMAIL" class="w-full bg-gray-800/80 text-white border border-gray-600 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-gold" placeholder="Email Address" required>
@@ -207,30 +207,8 @@
         </div>
     </footer>
 
-    <!-- JavaScript for AJAX form submission (no changes needed here) -->
-    <script>
-        const mailchimpUrl = 'https://gmail.us14.list-manage.com/subscribe/post?u=5c5648bf06d6228434ae5b2b6&id=5472794694&f_id=007eede0f0';
-
-        const handleFormSubmit = (event) => {
-            event.preventDefault(); 
-
-            const form = event.target;
-            const formData = new FormData(form);
-
-            fetch(mailchimpUrl, {
-                method: 'POST',
-                body: formData,
-                mode: 'no-cors'
-            })
-            .catch(error => console.error('Error:', error))
-            .finally(() => {
-                window.location.href = './thank-you.html';
-            });
-        };
-
-        document.getElementById('signup-form-1').addEventListener('submit', handleFormSubmit);
-        document.getElementById('signup-form-2').addEventListener('submit', handleFormSubmit);
-    </script>
+    <!-- Protected pre-alpha access form: posts to /api/request-access (Turnstile-verified) -->
+    <script src="/js/request-access.js" defer></script>
 
 </body>
 </html>
